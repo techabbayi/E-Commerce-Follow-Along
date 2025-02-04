@@ -80,5 +80,3 @@ Milestone 2 focuses on the creation and setup of the **Login Page** for the appl
 - **React Router**: For managing routing (if applicable).
 - **Axios**: To handle HTTP requests for user authentication (in future milestones).
   
-=======
->>>>>>> 16a0a8951ef990062e11993ffb4fd262b1e4b0c3
