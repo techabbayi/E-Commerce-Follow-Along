@@ -90,3 +90,16 @@ Milestone 2 focuses on the creation and setup of the **Login Page** for the appl
 - Created a Node.js server with Express.
 - Connected the server to MongoDB using Mongoose.
 - Added error handling middleware for better debugging.
+
+## Milestone 4: User Model, User Controller & File Uploads
+
+### Progress:
+- Created a **User Model** to store user data (name, email, password, profile image).
+- Developed a **User Controller** to handle user registration and login, including password hashing and JWT authentication.
+- Set up **Multer** for file uploads, allowing users to upload profile images during registration.
+
+### Technologies Used:
+- **Mongoose**: To define the User Model.
+- **bcryptjs**: To hash passwords.
+- **JWT**: For user authentication.
+- **Multer**: To handle file uploads.
