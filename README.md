@@ -88,3 +88,11 @@ Milestone 2 focuses on creating and setting up the **Login Page** for the applic
 - Created a Node.js server with Express.
 - Connected the server to MongoDB using Mongoose.
 - Added error handling middleware for better debugging.
+- 
+
+## Milestone 4 Overview
+
+### In this milestone, the following features were implemented:
+
+- User Model Creation: A new User model was created to represent user data in the database, including necessary fields such as name, email, password, etc.
+- Multer Integration: Multer was integrated to handle file uploads (e.g., profile images, documents, etc.). Multer handles multipart/form-data, which is used for uploading files in Node.js applications.
