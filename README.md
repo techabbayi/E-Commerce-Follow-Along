@@ -1,8 +1,6 @@
-# E-commerce-follow-along
+# E-Commerce Application (MERN Stack)
 
-# Project Overview: E-Commerce Application (MERN Stack )
-
-This project will guide you through building  full-stack E-commerce website  using the MERN stack (MongoDB, Express, React, Node.js). It allows users to browse products, add them to the cart, and proceed to checkout. Admin users can manage products, view orders, and update inventory.
+This project guides you through building a full-stack E-Commerce website using the MERN stack (MongoDB, Express, React, Node.js). The application allows users to browse products, add them to their cart, and proceed to checkout. Admin users can manage products, view orders, and update inventory.
 
 ## Tech Stack
 
@@ -46,18 +44,19 @@ This project will guide you through building  full-stack E-commerce website  usi
   - Input validation and data sanitization.
   - HTTPS support for secure data transmission.
 
+---
 
+## Milestone 1: User Authentication Setup
 
-# Milestone 1: 
+### Description:
+The user authentication setup focuses on allowing users to sign up and log in with their credentials. The backend will handle secure password storage using bcryptjs, while the frontend will manage user interactions. The user will be authenticated with JWT (JSON Web Tokens) for session management.
 
-In a MERN stack application, login and sign-up (authentication) typically involve a process where users can register (sign-up) with their credentials, and later log in using those credentials. The login and sign-up process can be divided into several steps, with separate client-side (React) and server-side (Node.js/Express) handling.
-<<<<<<< HEAD
-
+---
 
 ## Milestone 2: Login Page & Authentication Setup
 
-### Description
-Milestone 2 focuses on the creation and setup of the **Login Page** for the application, including basic UI elements like forms and fields for user authentication. This milestone also includes setting up Tailwind CSS for styling, ensuring responsive and modern design practices. 
+### Description:
+Milestone 2 focuses on creating and setting up the **Login Page** for the application, including basic UI elements like forms and fields for user authentication. This milestone also involves setting up Tailwind CSS for styling to ensure responsive and modern design practices.
 
 ### Key Features Completed:
 - **Login Page Design**: 
@@ -79,4 +78,21 @@ Milestone 2 focuses on the creation and setup of the **Login Page** for the appl
 - **Tailwind CSS**: Utility-first CSS framework for styling.
 - **React Router**: For managing routing (if applicable).
 - **Axios**: To handle HTTP requests for user authentication (in future milestones).
-  
+
+---
+
+## Milestone 3: Backend Setup
+
+### Progress:
+- Set up the project folder structure with routes, controllers, models, middlewares, and utilities.
+- Created a Node.js server with Express.
+- Connected the server to MongoDB using Mongoose.
+- Added error handling middleware for better debugging.
+
+### Key Features:
+- **Express Setup**: Initialized the Express server to handle API requests.
+- **MongoDB Integration**: Connected to MongoDB with Mongoose for data storage.
+- **Folder Structure**: Organized the backend structure for scalability and ease of maintenance.
+
+---
+
