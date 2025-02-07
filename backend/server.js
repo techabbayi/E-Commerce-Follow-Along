@@ -7,13 +7,17 @@ dotenv.config();  // Load environment variables
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const handler = require('./middleware/handler');
+const handler = require('./middleware/error');
 
 // Add the error handling middleware
 app.use(handler);
 
 const routes = require('./routes/routes');
 app.use('/api', routes); // Your routes are now under /api endpoint
+
+
+const connectDatabase = require('./db/database');
+connectDatabase();
 
 
 
