@@ -82,3 +82,11 @@ Milestone 2 focuses on the creation and setup of the **Login Page** for the appl
   
 =======
 >>>>>>> 16a0a8951ef990062e11993ffb4fd262b1e4b0c3
+
+## Milestone 3 - Backend Setup
+
+### Progress
+- Set up project folder structure with routes, controllers, models, middlewares, and utils.
+- Created a Node.js server with Express.
+- Connected the server to MongoDB using Mongoose.
+- Added error handling middleware for better debugging.
