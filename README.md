@@ -112,3 +112,18 @@ Technologies used:
 - React
 - Tailwind CSS
 - React Router
+
+## Milestone 6: Backend endpoint for the Signup page to store all user data securely
+
+In this milestone, I have implemented User Authentication for the backend with the following features:
+
+- Password Encryption
+- User Data Storage
+- User Signup via Endpoint
+- User Login via Endpoint 
+- Tested Endpoints Using Postman GET & POST Requests
+
+Technologies Used:
+- MongoDB & Mongoose (Database & ORM)
+- bcrypt.js (Password encryption)
+- jsonwebtoken (JWT) (Authentication)

@@ -1,26 +1,63 @@
-const express = require("express");
-const path = require("path");
 const User = require("../model/user");
-const router = express.Router();
-const {upload} = require("../multer");
-const ErrorHandler = require("../utils/ErrorHandler");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
-// create user
-router.post("/create-user",upload.single("file"), async(req,res)=>{
-    const {name, email, password} = req.body;
-    const userEmail = await User.findOne({email});
-    if (userEmail) {
-        return next(new ErrorHandler("User already exists", 400));
-      }
-const filename = req.file.filename ;
-const fileUrl = path.join(filename);
-const user={
-    name:name,
-    email:email,
-    password:password,
-    avatar: fileUrl,
-} ;
-console.log(user);
-});
+// User Registration
+const registerUser = async (req, res) => {
+    try {
+        const { name, email, password } = req.body;
 
-module.exports = router;
+        // Check if user already exists
+        let user = await User.findOne({ email });
+        if (user) {
+            return res.status(400).json({ message: "User already exists" });
+        }
+
+        // Hash Password
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        // Create User
+        user = new User({
+            name,
+            email,
+            password: hashedPassword
+        });
+
+        await user.save();
+
+        res.status(201).json({ message: "User registered successfully" });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Server Error" });
+    }
+};
+
+// User Login
+const loginUser = async (req, res) => {
+    try {
+        const { email, password } = req.body;
+
+        // Find user
+        const user = await User.findOne({ email }).select("+password");
+        if (!user) {
+            return res.status(400).json({ message: "Invalid email or password" });
+        }
+
+        // Compare Password
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) {
+            return res.status(400).json({ message: "Invalid email or password" });
+        }
+
+        // Generate Token
+        const token = user.getJwtToken();
+        res.status(200).json({ success: true, token, user });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Server error" });
+    }
+};
+
+// Export functions
+module.exports = { registerUser, loginUser };
