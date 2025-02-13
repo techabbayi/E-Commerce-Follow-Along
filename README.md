@@ -118,12 +118,23 @@ Technologies used:
 In this milestone, I have implemented User Authentication for the backend with the following features:
 
 - Password Encryption
-- User Data Storage
 - User Signup via Endpoint
-- User Login via Endpoint 
 - Tested Endpoints Using Postman GET & POST Requests
 
 Technologies Used:
 - MongoDB & Mongoose (Database & ORM)
 - bcrypt.js (Password encryption)
 - jsonwebtoken (JWT) (Authentication)
+
+## Milestone 7: Backend endpoint for the Login page to store all user data securely and Implementation
+
+In this milestone, we focus on creating a login endpoint for user authentication. This includes:
+
+- Accepting User Credentials
+- Password Hashing
+- Compare Hashed Passwords
+- Credentials Store in Database (MongoDB)
+
+Technologies Used:
+- MongoDB & Mongoose (Database & ORM)
+- bcrypt.js (Password encryption)
