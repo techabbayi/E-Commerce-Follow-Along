@@ -138,3 +138,11 @@ In this milestone, we focus on creating a login endpoint for user authentication
 Technologies Used:
 - MongoDB & Mongoose (Database & ORM)
 - bcrypt.js (Password encryption)
+
+## Milestone 8:Card Componenet & Homepage Layout
+
+In this milestone, we focused on creating a Card Component and Homepage Layout. This Includes:
+
+- Resusable Product card Component
+- Responsive Grid Layout
+- Tailwind CSS Styling for Home Page
