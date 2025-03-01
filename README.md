@@ -170,3 +170,12 @@ In this milestone, we focused on sending and receiving product data between the 
 - Creating an API Endpoint to send product data
 - Receive data on the frontend
 - Dynamically display product data
+
+
+## Milestone 12: My Products Page
+
+In this milestone, we created a "My Products" page that displays all the products added by the user, filtered by their email.
+
+- Added an endpoint to fetch products by user email.
+- Created a function to retrieve and display products dynamically.
+- Utilized the Card component to present each product.
