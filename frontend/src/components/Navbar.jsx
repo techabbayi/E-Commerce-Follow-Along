@@ -27,7 +27,7 @@ function Navbar() {
   };
 
   return (
-    <div className="h-16 fixed top-0 left-0 right-0 z-1 w-full bg-gray-900 text-white flex items-center justify-between px-6 shadow-lg">
+    <div className="h-16 fixed top-0 left-0 right-0 z-1 w-full bg-[#12192c] text-white flex items-center justify-between px-6 shadow-lg">
       <h1 className="text-2xl font-semibold tracking-wide">
         LocalBaZar.
       </h1>
@@ -35,7 +35,7 @@ function Navbar() {
       <div className="space-x-4">
         {user ? (
           <>
-              <span className="text-lg font-medium">Hi❕{user.name}</span>
+            <span className="text-lg font-medium">Hi❕{user.name}</span>
             <button
               onClick={() => navigate('/products')} // ✅ Show Product button after login
               className="bg-green-600 text-white px-5 py-2 rounded-lg shadow-md transition duration-300 hover:bg-green-700"

@@ -34,7 +34,7 @@ const EditProduct = () => {
         e.preventDefault();
         try {
             await axios.put(`http://localhost:8000/products/${id}`, product);
-            alert("Product updated successfully!");
+            console.log("Product updated successfully!");
             navigate("/");  // Redirect to product list
         } catch (error) {
             console.error("Error updating product:", error);
@@ -63,6 +63,13 @@ const EditProduct = () => {
                         placeholder="Price"
                         className="p-2 border rounded"
                         required
+                    />
+                    <textarea
+                        name="description"
+                        value={product.description}
+                        onChange={handleChange}
+                        placeholder="Description"
+                        className="p-2 border rounded"
                     />
                     <button
                         type="submit"
