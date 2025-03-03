@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Product = require("../model/product");
+const Product = require("../model/Product");
 const authenticate = require("../middleware/auth");
 const upload = require("../multer");
 
@@ -67,5 +67,15 @@ router.put("/:id", async (req, res) => {
     }
   });
   
+  router.delete("/:id", async (req, res) => {
+    try {
+      const { id } = req.params;
+      const result = await Product.findByIdAndDelete(id);
+      if (!result) return res.status(404).json({ message: "Product not found" });
+      res.json({ message: "Product deleted successfully" });
+    } catch (error) {
+      res.status(500).json({ message: "Error deleting product", error });
+    }
+  });
 
 module.exports = router;
