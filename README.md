@@ -171,7 +171,6 @@ In this milestone, we focused on sending and receiving product data between the 
 - Receive data on the frontend
 - Dynamically display product data
 
-
 ## Milestone 12: My Products Page
 
 In this milestone, we created a "My Products" page that displays all the products added by the user, filtered by their email.
@@ -185,3 +184,18 @@ In this milestone, we created endpoint for editing/Updating a Product using exis
 
 - Writen an endpoint to update existing data in MongoDB.
 - Autofill forms with previous data for editing.
+
+## Milestone 14: Delete Product from Database in Frontend
+
+In this milestone, we created endpoint for deleting a product using existing data in frontend card component
+
+- Written an endpoint to delete request existing data frm frontend to MongoDB
+
+## Milestone 15: Navbar Component for Every Screen Page in Frontend
+
+In this milestone, we created an Navbar Component for every screen with page like Home, My Products, Add product, cart,etc.,
+
+- Added Navbar for all pages includes HomePage, Products page, login/Signup page, and Product form
+
+- Made full responsive for both desktop and mobile view and styled using tailwind CSS
+
