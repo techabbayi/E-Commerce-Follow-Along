@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from '../components/Navbar'; // Adjust the path as needed
+import Navbar from '../components/Navbar';
 import Signup from "../components/auth/Signup";
 
 function SignUpPage() {
   return (
     <div>
       <Navbar />
-      <div> {/* Add margin-top */}
+      <div>
         <Signup />
       </div>
     </div>

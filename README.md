@@ -199,3 +199,12 @@ In this milestone, we created an Navbar Component for every screen with page lik
 
 - Made full responsive for both desktop and mobile view and styled using tailwind CSS
 
+## Milestone 16: Product Info Page
+
+In this milestone, we created a product information page that displays detailed product data and includes features like quantity selection, add-to-cart, buy-now, and a like button.
+
+- Implemented a product info page that fetches and displays detailed product information based on the product ID from the URL.
+
+- Applied a professional dark blue theme using Tailwind CSS.
+
+- Implemented event handlers for quantity changes, add-to-cart, buy-now, and like actions.

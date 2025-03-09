@@ -1,5 +1,5 @@
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
-import {LoginPage,SignupPage, Homepage, ProductForm, EditProduct} from './Routes.jsx'
+import {LoginPage,SignupPage, Homepage, ProductForm, EditProduct, ProductInfoPage} from './Routes.jsx'
  
  
 function App() {
@@ -11,6 +11,7 @@ function App() {
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/add-product" element={<ProductForm/>} />
       <Route path="/edit-product/:id" element={<EditProduct/>} />      
+      <Route path="/products/:id" element={<ProductInfoPage />} />
     </Routes>
     </BrowserRouter>
  
