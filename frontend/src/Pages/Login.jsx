@@ -6,7 +6,7 @@ function LoginPage() {
   return (
     <div>
       <Navbar />
-      <div> {/* Add margin-top */}
+      <div>
         <Signin />
       </div>
     </div>

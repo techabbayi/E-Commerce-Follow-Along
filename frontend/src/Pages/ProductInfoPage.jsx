@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
-import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'; // Import heart icons
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 
 function ProductInfoPage() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const [liked, setLiked] = useState(false); // State for like button
+  const [liked, setLiked] = useState(false);
 
   useEffect(() => {
     axios.get(`http://localhost:8000/products/${id}`)
@@ -40,11 +40,9 @@ function ProductInfoPage() {
 
   const handleLike = () => {
     setLiked(!liked);
-    // Here you can add logic to save the like status to your backend or local storage
   };
 
   const handleBuyNow = () => {
-    // Implement your buy now logic here
     console.log(`Buy now: ${quantity} of product ${id}`);
     alert('Buy now functionality not fully implemented.');
   };
