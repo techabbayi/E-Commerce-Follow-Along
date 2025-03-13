@@ -214,3 +214,13 @@ In this milestone, we created a product information page that displays detailed 
 In this milestone, we created an endpoint for saving the Cart Product Details in User Schema and Store Cart details in MongoDB Database.
 
 - Implemented POST Method to handle endpoint to store cart products in Database.
+
+## Milestone 18:
+
+In this milestone, we created an endpoint for fetching all the products inside a user's cart from the MongoDB database based on the user's email. This allows the cart page to display the products that the user has added to their cart.
+
+- Implemented GET Method to handle the endpoint for fetching cart products from the database.
+
+- Validated User based on the email provided in the request and retrieved their cart items.
+
+- Displayed Cart Products with details such as quantity, price, product name, and image on the cart page.
