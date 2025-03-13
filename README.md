@@ -208,3 +208,9 @@ In this milestone, we created a product information page that displays detailed 
 - Applied a professional dark blue theme using Tailwind CSS.
 
 - Implemented event handlers for quantity changes, add-to-cart, buy-now, and like actions.
+
+## Milestone 17: Created an Endpoint for Saving Cart products in Database
+
+In this milestone, we created an endpoint for saving the Cart Product Details in User Schema and Store Cart details in MongoDB Database.
+
+- Implemented POST Method to handle endpoint to store cart products in Database.
