@@ -17,29 +17,30 @@ const userSchema = new mongoose.Schema({
     email: { type: String, required: [true, "Please enter your email!"], unique: true },
     password: { type: String, required: [true, "Please enter your password"], minLength: 4, select: false },
     phoneNumber: { type: Number, required: false },
-    cart: { type: [cartItemSchema], default: [] }, // ✅ Ensure cart is always an array
-    avatar: { 
-        public_id: { type: String, default: "" },  // ✅ Allow empty string instead of required
-        url: { type: String, default: "" } // ✅ Allow empty string instead of required
+    addresses: { type: [String], default: [] },
+    cart: { type: [cartItemSchema], default: [] },
+    avatar: {
+        public_id: { type: String, default: "" },
+        url: { type: String, default: "" }
     },
     createdAt: { type: Date, default: Date.now }
 });
 
 // Hash password before saving
 userSchema.pre("save", async function (next) {
-    if (!this.isModified("password")) return next();
+    if (!this.isModified("password")) return next();  // Only hash if password is new/modified
     this.password = await bcrypt.hash(this.password, 10);
     next();
 });
 
-// Method to get JWT token
-userSchema.methods.getJwtToken = function () {
-    return jwt.sign({ id: this._id }, process.env.JWT_SECRET_KEY, { expiresIn: process.env.JWT_EXPIRES });
-};
-
-// Method to compare entered password with hashed password
+// ✅ Compare entered password with hashed password
 userSchema.methods.comparePassword = async function (enteredPassword) {
     return bcrypt.compare(enteredPassword, this.password);
+};
+
+// ✅ Generate JWT token
+userSchema.methods.getJwtToken = function () {
+    return jwt.sign({ id: this._id }, process.env.JWT_SECRET_KEY, { expiresIn: process.env.JWT_EXPIRES });
 };
 
 // Create the User model
