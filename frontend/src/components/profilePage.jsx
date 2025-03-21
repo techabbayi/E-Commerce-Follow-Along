@@ -217,7 +217,7 @@ const Profile = () => {
       )}
 
       <footer className="w-full bg-gray-800 text-center text-gray-400 py-4 mt-8">
-        <p>Made with love by TechAbbayi</p>
+        <p>Made with ❤️ by TechAbbayi</p>
       </footer>
     </div>
   );
