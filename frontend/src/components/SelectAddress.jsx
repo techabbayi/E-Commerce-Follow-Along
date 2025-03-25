@@ -6,8 +6,10 @@ import Navbar from "../components/Navbar";
 const SelectAddress = () => {
     const [addresses, setAddresses] = useState([]);
     const [selectedAddress, setSelectedAddress] = useState(null);
+    const [cart, setCart] = useState([]); // State to store cart details
     const navigate = useNavigate();
 
+    // Fetch addresses
     useEffect(() => {
         const fetchAddresses = async () => {
             try {
@@ -16,33 +18,69 @@ const SelectAddress = () => {
                     console.error("User is not logged in or user object is missing.");
                     return;
                 }
-    
+
                 const user = JSON.parse(storedUser);
-                console.log("User object:", user);  // Check the entire user object
-                console.log("User Email:", user.email);  // Ensure email is available
-    
+                console.log("User object:", user); // Check the entire user object
+                console.log("User Email:", user.email); // Ensure email is available
+
                 if (!user.email) {
                     console.error("Email is missing from the user object.");
                     return;
                 }
-    
+
                 const response = await axios.get("http://localhost:8000/user/addresses", {
                     params: { email: user.email },
                 });
-    
+
                 setAddresses(response.data.addresses || []);
             } catch (error) {
                 console.error("Error fetching addresses:", error);
             }
         };
-    
+
         fetchAddresses();
     }, []);
-    
-    // Log the addresses state to ensure it's set correctly
+
+    // Fetch cart details
+    useEffect(() => {
+        const fetchCart = async () => {
+            try {
+                const storedUser = localStorage.getItem("user");
+                if (!storedUser) {
+                    console.error("User is not logged in or user object is missing.");
+                    return;
+                }
+
+                const user = JSON.parse(storedUser);
+                console.log("Fetching cart for userId:", user.userId);
+
+                if (!user.userId) {
+                    console.error("User ID is missing from the user object.");
+                    return;
+                }
+
+                const response = await axios.get("http://localhost:8000/cart", {
+                    params: { userId: user.userId },
+                });
+
+                console.log("Cart response:", response.data);
+                setCart(response.data.cart || []);
+            } catch (error) {
+                console.error("Error fetching cart:", error);
+            }
+        };
+
+        fetchCart();
+    }, []);
+
+    // Log the addresses and cart state to ensure they're set correctly
     useEffect(() => {
         console.log("Addresses in state:", addresses);
     }, [addresses]);
+
+    useEffect(() => {
+        console.log("Cart in state:", cart);
+    }, [cart]);
 
     const handleSelectAddress = (address) => {
         setSelectedAddress(address);
@@ -53,8 +91,13 @@ const SelectAddress = () => {
             alert("Please select an address.");
             return;
         }
-        alert(`Order placed successfully! Delivery to: ${selectedAddress}`);
-        navigate("/"); // Redirect to homepage or order confirmation page
+
+        navigate("/order-confirmation", {
+            state: {
+                cartItems: cart, // Pass the cart items
+                address: selectedAddress, // Pass the selected address
+            },
+        });
     };
 
     return (
@@ -69,7 +112,9 @@ const SelectAddress = () => {
                         {addresses.map((address, index) => (
                             <div
                                 key={index} // Replace with unique key if possible (e.g., address id)
-                                className={`p-4 border rounded-lg cursor-pointer ${selectedAddress === address ? "border-green-500 bg-gray-800" : "border-gray-700"}`}
+                                className={`p-4 border rounded-lg cursor-pointer ${
+                                    selectedAddress === address ? "border-green-500 bg-gray-800" : "border-gray-700"
+                                }`}
                                 onClick={() => handleSelectAddress(address)}
                             >
                                 {address}

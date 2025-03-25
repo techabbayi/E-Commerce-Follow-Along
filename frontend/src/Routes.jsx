@@ -7,4 +7,5 @@ import ProductInfoPage from './Pages/ProductInfoPage'
 import CartPage from './components/CartPage';
 import Profile from './components/profilePage';
 import SelectAddress from './components/SelectAddress';
-export {LoginPage,SignupPage, Homepage, ProductForm, EditProduct, ProductInfoPage, CartPage, Profile, SelectAddress};
+import OrderConfirmation from './Pages/OrderConfirmation';
+export {LoginPage,SignupPage, Homepage, ProductForm, EditProduct, ProductInfoPage, CartPage, Profile, SelectAddress, OrderConfirmation};
