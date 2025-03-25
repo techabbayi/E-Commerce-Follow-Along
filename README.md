@@ -255,4 +255,11 @@ In this milestone, we created an backend endpoint which will save address inside
 - Added an Endpoint to receive the address via input filed in frontend and store it on databse using endpoint backend
 - this addresses saves in user collection using an array.
 
-  
+
+## Milestone 23: Created Select Address page and Schema for Order details storing
+
+In this milestone, we created an Select Address page and Written Mongoose schema for storing orders details.
+
+- Added Place order button in cart page.
+- Created Select Address Page where we will display all adress and ask to select delivery address.
+- Written Mongoose Schema for storing Oriders Details
