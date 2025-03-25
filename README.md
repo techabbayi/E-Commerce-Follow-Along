@@ -224,3 +224,50 @@ In this milestone, we created an endpoint for fetching all the products inside a
 - Validated User based on the email provided in the request and retrieved their cart items.
 
 - Displayed Cart Products with details such as quantity, price, product name, and image on the cart page.
+
+## Milestone 19: Cart Page Implementaion
+
+In this milestone, we created a Frontend page UI for cart and wrttien endpoint to increase and decrease the quantity of product inside cart.
+
+- Created an Cart page that displays products inside cart using endpoint.
+  
+- for each product added an option to increase and decrease quantity using + and - buttons.
+
+## Milestone 20: Profile Page Implementation
+
+In this milestone, we created a profile page for displaying User Profil and written endpoint to receive user data and send all userdata using mail.
+
+- Created an Profile Page that will display all user data ( Profile Photo, Name, mail and addresses ).
+- 
+- Created an Backend endpoint which send all user data using mail.
+
+## Milestone 21: Address Input Form Implementation
+
+In this milestone, we created a Address input frontend page form which takes address from input fields and storing input state.
+
+- Created an state that will store input address
+- Added Navigation in Profile Page for Address Form Page.
+
+## Milestone 22: Created Backend endpoint for address Storing
+
+In this milestone, we created an backend endpoint which will save address inside user profile in database.
+
+- Added an Endpoint to receive the address via input filed in frontend and store it on databse using endpoint backend
+- this addresses saves in user collection using an array.
+
+
+## Milestone 23: Created Select Address page and Schema for Order details storing
+
+In this milestone, we created an Select Address page and Written Mongoose schema for storing orders details.
+
+- Added Place order button in cart page.
+- Created Select Address Page where we will display all adress and ask to select delivery address.
+- Written Mongoose Schema for storing Oriders Details
+
+## Milestone 24: Created Order Confirmation page in frontend.
+
+In this milestone, we created an Order Confirmation Page in frontend and Displaying products ordering and adress selection and total price details.
+
+- Added Order COnfirmation Page in frontend
+- Displaying products in selectAddress
+- Redirecting After Select Adress to Order Confirmation page.
