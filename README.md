@@ -263,3 +263,11 @@ In this milestone, we created an Select Address page and Written Mongoose schema
 - Added Place order button in cart page.
 - Created Select Address Page where we will display all adress and ask to select delivery address.
 - Written Mongoose Schema for storing Oriders Details
+
+## Milestone 24: Created Order Confirmation page in frontend.
+
+In this milestone, we created an Order Confirmation Page in frontend and Displaying products ordering and adress selection and total price details.
+
+- Added Order COnfirmation Page in frontend
+- Displaying products in selectAddress
+- Redirecting After Select Adress to Order Confirmation page.
