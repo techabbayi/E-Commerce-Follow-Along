@@ -279,3 +279,10 @@ In this milestone, we created an endpoint for placing the order for receiving pr
 - Created an endpoint for receiving products, user, address details
 - Retirving _id of the user using mail
 - product order will be diffrent with same address
+
+## Milestone 26: Created backend endpoint for Getting Orders
+
+In this milestone, we created an endpoint for getting all orders of the user by email
+
+- Created an endpoint for getting order details by email
+- Using Mail instead of _id for easy endpoint recognization.
