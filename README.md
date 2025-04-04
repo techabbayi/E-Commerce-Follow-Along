@@ -286,3 +286,8 @@ In this milestone, we created an endpoint for getting all orders of the user by 
 
 - Created an endpoint for getting order details by email
 - Using Mail instead of _id for easy endpoint recognization.
+
+## Milestone 27: Created Frontend myOders Page for Displaying all Ordered Products.
+
+In this milestone, we created an Frontend page for oders displaying
+- Using mail orders get fetching from backend
