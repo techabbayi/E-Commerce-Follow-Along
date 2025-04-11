@@ -291,3 +291,18 @@ In this milestone, we created an endpoint for getting all orders of the user by 
 
 In this milestone, we created an Frontend page for oders displaying
 - Using mail orders get fetching from backend
+
+## Milestone 28: Created a cancel button in myOrders Page for cacelling order functionality
+
+In this milestone, we created an backend endpoint for cancel order and cancel button in myOrders page.
+- For every order cancel button
+- using order-id endpoint fetching from backend
+
+
+## Milestone 29: Implementation PayPal Payment Gateway in mySite
+
+In this milestone, i understood how payment gateway works and how to use paypal payment api and integrate payments in site.
+
+- Implemented Types of orders like COD, Online Payment and EMI Options.
+- Creating radio buttons to select order Payment Options for UI
+- Understood Paypal Developers API and Sandbox Integration.
